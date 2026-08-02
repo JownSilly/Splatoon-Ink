@@ -5559,7 +5559,6 @@ GameObject:
   - component: {fileID: 1429810221}
   - component: {fileID: 1429810220}
   - component: {fileID: 1429810224}
-  - component: {fileID: 1429810225}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -5674,33 +5673,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extendsIslandOffset: 1
---- !u!54 &1429810225
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429810219}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1438707434
 GameObject:
   m_ObjectHideFlags: 0
@@ -5817,7 +5789,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1877300510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5830,7 +5802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be8a48416f841d4fac024c4f1994147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintColor: {r: 0, g: 0, b: 0, a: 0}
+  paintColor: {r: 0.7264151, g: 0, b: 0, a: 1}
   radius: 1
   strength: 1
   hardness: 1

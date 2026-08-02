@@ -47,7 +47,7 @@ Material:
     - Vector1_dc4dddd7e6c04cb0b10ba5b78324fa22: 0
     - _AlphaStep: 0
     - _AlphaStep2: 0.7
-    - _Clip: 0.9
+    - _Clip: 0.528
     - _ColorStep: 0
     - _ColorStep2: 0.404
     - _QueueControl: 0

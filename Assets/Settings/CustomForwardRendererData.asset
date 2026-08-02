@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2b5599ec606184aa283db49989a228, type: 3}
   m_Name: RenderMetaballs
   m_EditorClassIdentifier: Assembly-CSharp::RenderMetaballs
-  m_Active: 1
+  m_Active: 0
   blitMaterial: {fileID: -876546973899608171, guid: 513807bc2f5309843ae2ca6907d35342, type: 3}
   renderObjectsSettings:
     passTag: RenderMetaballs
@@ -44,6 +44,26 @@ MonoBehaviour:
       offset: {x: 0, y: 0, z: 0, w: 0}
       cameraFieldOfView: 60
   downsamplingAmount: 1
+--- !u!114 &-2875753875573115515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9269c5eefd76e6141b1ff2f607e7c082, type: 3}
+  m_Name: RenderScreenSpaceMetaballs
+  m_EditorClassIdentifier: Assembly-CSharp::RenderScreenSpaceMetaballs
+  m_Active: 0
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 16
+  _blurMaterial: {fileID: 2100000, guid: 79343582ff01e0043bb54f7b711dd310, type: 2}
+  _blitMaterial: {fileID: 2100000, guid: 3abad26229f1dfe418d9152127d1e435, type: 2}
+  _blurPasses: 10
+  _downsample: 3
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,7 +91,9 @@ MonoBehaviour:
   m_RendererFeatures:
   - {fileID: 7112055495327021477}
   - {fileID: -7696755312624358418}
-  m_RendererFeatureMap: a5f9d4adca18b362eeabec83d2a12f95
+  - {fileID: -2875753875573115515}
+  - {fileID: 7646990942291048921}
+  m_RendererFeatureMap: a5f9d4adca18b362eeabec83d2a12f9585f50229164517d8d939e31bbf911f6a
   m_UseNativeRenderPass: 0
   xrSystemData: {fileID: 0}
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
@@ -84,7 +106,7 @@ MonoBehaviour:
     m_Bits: 47
   m_TransparentLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 47
   m_DefaultStencilState:
     overrideStencilState: 0
     stencilReference: 0
@@ -125,3 +147,23 @@ MonoBehaviour:
   WriteDepthMaterial: {fileID: 2100000, guid: 3abad26229f1dfe418d9152127d1e435, type: 2}
   BlurPasses: 5
   BlurDistance: 1
+--- !u!114 &7646990942291048921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00045f12942b46c698459096c89274e, type: 3}
+  m_Name: FullScreenPassRendererFeature
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.FullScreenPassRendererFeature
+  m_Active: 0
+  injectionPoint: 450
+  fetchColorBuffer: 1
+  requirements: -1
+  passMaterial: {fileID: 2100000, guid: 79343582ff01e0043bb54f7b711dd310, type: 2}
+  passIndex: 0
+  bindDepthStencilAttachment: 0
+  m_Version: 1
